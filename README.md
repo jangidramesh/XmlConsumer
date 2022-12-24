@@ -12,3 +12,8 @@
 
 ##Via Code:
 1. Open XmlConsumerApplication.java file and run  its main method
+
+##Testing via Postman:
+1. Open Postman
+2. Import collection from directory XmlConsumer/Postman_collection/iApps-task.postman_collection.json
+3. You can play with this after running the project.
