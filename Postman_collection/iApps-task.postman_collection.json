@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "a672982d-dbb4-4896-810e-f070d2c3b5c8",
+		"name": "iApps-task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET iApps",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "newspaperName",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "fileName",
+							"value": "soa",
+							"type": "text"
+						},
+						{
+							"key": "page",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "size",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "sortList",
+							"value": "fileName",
+							"type": "text"
+						},
+						{
+							"key": "sortOrder",
+							"value": "DESC",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/iApps/api/epaper",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"iApps",
+						"api",
+						"epaper"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST iApps",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<epaperRequest>\r\n    <deviceInfo name=\"Browser\" id=\"soaa@comp\">\r\n        <screenInfo width=\"1280\" height=\"752\" dpi=\"160\" />\r\n        <osInfo name=\"Browser\" version=\"1.0\" />\r\n        <appInfo>\r\n            <newspaperName>soa</newspaperName>\r\n            <version>1.0</version>\r\n        </appInfo>\r\n    </deviceInfo>\r\n    <getPages editionDefId=\"11\" publicationDate=\"2017-06-06\" />\r\n</epaperRequest>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/iApps/api/epaper",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"iApps",
+						"api",
+						"epaper"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
