@@ -10,8 +10,11 @@
 6. docker-compose up
 7. docker-compose down
 
-##Via Code:
-1. Open XmlConsumerApplication.java file and run  its main method
+##Via Jar file:
+1. cd database
+2. docker-compose up -d   
+3. cd XmlConsumer/target
+4. java -jar XmlConsumer-0.0.1-SNAPSHOT.jar
 
 ##Testing via Postman:
 1. Open Postman
